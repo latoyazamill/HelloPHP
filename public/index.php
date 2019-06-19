@@ -12,8 +12,8 @@ require '../api_key.php';
   <body>
     <?php
     $client = new HelloSign\Client($apikey);
-    $account = $client->getAccount();
-    print_r($account);
+    $file = $client->getFiles('421259cd9cb717bee8510e4e7fc92cd46f7aab3a', $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_PDF);
+    print_r($file);
      ?>
   </body>
 </html>
